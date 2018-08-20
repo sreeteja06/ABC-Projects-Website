@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home:Book Store</title>
+    <link rel="stylesheet" type="text/css" href="homeMobile.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="homeLaptop.css">
+	<script>
+		// When the user clicks on div, open the popup
+		function myFunction() {
+			var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");
+		}
+		function projectIdShare(projectNumber){
+			window.location.href = '../ProjectDesc/ProjectDesc.php?projectid='+projectNumber;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="container">
+			<button onclick="topFunction()" id="scroolToTop" title="Go to top">Top</button>
+			<script>
+					// When the user scrolls down 20px from the top of the document, show the button
+					window.onscroll = function() {scrollFunction()};
+					
+					function scrollFunction() {
+						if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+							document.getElementById("scroolToTop").style.display = "block";
+						} else {
+							document.getElementById("scroolToTop").style.display = "none";
+						}
+					}
+					
+					// When the user clicks on the button, scroll to the top of the document
+					function topFunction() {
+						document.body.scrollTop = 0;
+						document.documentElement.scrollTop = 0;
+					}
+			</script>
+		<nav class="nav">
+			<ul class="navlist">
+				<li class="Home">
+					<img src="../imgs/home.png" height="30px" width="30px">
+				</li>
+				<li class="Catalog">
+					<a href="../catalog/catalog.html"><img src="../imgs/catalog.jpg" height="30px" width="30px"></a>
+				</li>
+				<li class="Login">
+					<img src="../imgs/login.png" height="30px" width="30px">
+				</li>
+				<li class="notifications">
+						<div class="popup" onclick="myFunction()"><img src="../imgs/notifications.png" height="30px" width="30px">
+							<span class="popuptext" id="myPopup">No notifications</span>
+						</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="Recommended">
+			<p class="smallDescCards">Check Them Out</p>
+			<p class="bigDescCards">Top Projects</p>
+			<div class="RecommendedCard" onclick="projectIdShare(2)">
+				<div class="ProjectId">#2</div>
+				<div class="ProjectStatus">Running</div>
+				<div class="ProjectTitle">ABC Projects Website</div>
+				<div class="ProjectHead">M.Sree Teja</div>
+				<div class="AddToCart">
+					<a href="git.png">
+						<img src="../imgs/git.png" height="30px" width="30px">
+					</a>
+				</div>
+				<div class="Bookprice">Web</div>
+			</div>
+			<div class="RecommendedCard" onclick="projectIdShare(1)">
+				<div class="ProjectId">#1</div>
+				<div class="ProjectStatus">Halt</div>
+				<div class="ProjectTitle">ITS Student Companion</div>
+				<div class="ProjectHead">M.Sree Teja</div>
+				<a href="git.png">
+					<div class="AddToCart">
+						<img src="../imgs/git.png" height="30px" width="30px">
+					</div>
+				</a>
+				<div class="Bookprice">Android</div>
+			</div>
+			<div class="RecommendedCard" onclick="projectIdShare(3)">
+				<div class="ProjectId">#3</div>
+				<div class="ProjectStatus">Halt</div>
+				<div class="ProjectTitle">ICFAI Tree</div>
+				<div class="ProjectHead">Sripad Joshi</div>
+				<a href="git.png">
+					<div class="AddToCart">
+						<img src="../imgs/git.png" height="30px" width="30px">
+					</div>
+				</a>
+				<div class="Bookprice">Android</div>
+			</div>
+		</div>
+		<div class="proposedprojects" onclick="projectIdShare(4)">
+			<p class="smallDescCards">Need a Helping hand</p>
+			<p class="bigDescCards">Requested projects</p>
+			<div class="proposedprojectCard">
+				<div class="ProjectId">#4</div>
+				<div class="ProjectStatus">Waiting</div>
+				<div class="ProjectTitle">ABC android app</div>
+				<div class="ProjectHead">M.Sree Teja</div>
+				<a href="git.png">
+					<div class="AddToCart">
+						<img src="../imgs/git.png" height="30px" width="30px">
+					</div>
+				</a> 
+				<div class="Bookprice">android</div>
+			</div>
+			<div class="proposedprojectCard" onclick="projectIdShare(5)">
+				<div class="ProjectId">#5</div>
+				<div class="ProjectStatus">Waiting</div>
+				<div class="ProjectTitle">Clubs Community</div>
+				<div class="ProjectHead">M.Sree Teja</div>
+				<a href="../imgs/git.png">
+					<div class="AddToCart">
+						<img src="../imgs/git.png" height="30px" width="30px">
+					</div>
+				</a>
+				<div class="Bookprice">Website</div>
+			</div>
+			<div class="proposedprojectCard" onclick="projectIdShare(6)">
+				<div class="ProjectId">#6</div>
+				<div class="ProjectStatus">Waiting</div>
+				<div class="ProjectTitle">Saple</div>
+				<div class="ProjectHead">S. Sai Krishna</div>
+				<a href="../imgs/git.png">
+					<div class="AddToCart">
+						<img src="../imgs/git.png" height="30px" width="30px">
+					</div>
+				</a>
+				<div class="Bookprice">Website</div>
+			</div>
+		</div>
+	</div>
+	<footer style="text-align: center; font-style: italic">&copy; ABC Club</footer>
+</body>
+</html>

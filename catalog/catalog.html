@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalog: Book Store</title>
+    <style type="text/css">
+        *{
+			box-sizing: border-box;
+		}
+		*{
+			outline: 1px solid red
+		}
+		html {
+			height: 100%;
+			background-color: #f4f7f9;
+		}
+        a{
+            text-decoration: none;
+
+        }
+		.navlist li {
+			display: inline-block;
+			padding: 10px;
+		}
+
+		.navlist {
+			width: 100%;
+			margin-top: 50px;
+			position: relative;
+		}
+        .Home:hover{
+            background-color: #a583f0;
+        }
+		
+		.Catalog{
+			border-bottom: 3px solid cyan;
+		}
+		.notifications {
+			float: right;
+		}
+
+		.notifications:hover {
+			background-color: #f79e9e;
+		}
+		.Login{
+			margin-right: 40px;
+			float: right;
+		}
+		.Login:hover{
+			background-color: #ccf5b8;
+		}
+        .container{
+			width: 1130px;
+            height: 600px;
+			margin-left: 200px;
+            box-shadow: 0 0 15px #888888;
+		}
+        th{
+            padding: 15px;
+            font-size: 23px;
+        }
+        tr{
+            text-align: center;
+        }
+        /* The actual popup */
+		.popup .popuptext {
+		    visibility: hidden;
+		    width: 160px;
+		    background-color: #555;
+		    color: #fff;
+		    text-align: center;
+			margin-top: 40px;
+		    border-radius: 6px;
+		    padding: 8px 0;
+		    position: absolute;
+		    z-index: 1;
+		    left: 78%;
+		}
+
+		/* Popup arrow */
+		.popup .popuptext::after {
+		    content: "";
+		    position: absolute;
+		    top: 100%;
+		    left: 50%;
+		    margin-left: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color: #555 transparent transparent transparent;
+		}
+
+		/* Toggle this class - hide and show the popup */
+		.popup .show {
+		    visibility: visible;
+		    -webkit-animation: fadeIn 1s;
+		    animation: fadeIn 1s;
+		}
+    </style>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+            <nav class="nav">
+                    <ul class="navlist">
+                    
+                        <li class="Home">
+                            <a href="../home/home.html">
+                            <img src="../imgs/home.png" height="30px" width="30px">
+                            </a>
+                        </li>
+                        <li class="Catalog">
+                            <img src="../imgs/catalog.jpg" height="30px" width="30px">
+                        </li>
+                            <li class="Login">
+                                <img src="../imgs/login.png" height="30px" width="30px">
+                            </li>
+                        <li class="notifications">
+                                <div class="popup" onclick="myFunction()"><img src="../imgs/notifications.png" height="30px" width="30px">
+                                    <span class="popuptext" id="myPopup">No notifications</span>
+                                </div>
+                        </li>
+                    </ul>
+                </nav>
+        <table align="center">
+            <tr>
+                <th>Project ID</th>
+                <th>Project Name</th>
+                <th>Project Head</th>
+                <th>Project Status</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ITS Student Companion</td>
+                <td>M.Sree Teja</td>
+                <td>Halt</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ABC Projects Website</td>
+                <td>M.Sree Teja</td>
+                <td>Running</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ICFAI Tree</td>
+                <td>Sripad Joshi</td>
+                <td>Halt</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ABC android app</td>
+                <td>M.Sree Teja</td>
+                <td>Waiting</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Clubs Community</td>
+                <td>M.Sree Teja</td>
+                <td>Waiting</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Saple</td>
+                <td>Krishna</td>
+                <td>Waiting</td>
+            </tr>
+        </table>
+    </div>
+    <footer style="text-align: center; font-style: italic">&copy; ABC Club</footer>
+</body>
+</html>

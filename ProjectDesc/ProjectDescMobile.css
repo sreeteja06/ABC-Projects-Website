@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	background-color: #f4f7f9;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+
+.navlist li {
+    display: inline-block;
+    margin: 10px;
+    margin-left: 15px;
+}
+.navlist {
+	width: 100%;
+}
+
+.Home:hover{
+    background-color: #a583f0;
+}
+
+.Catalog:hover {
+	background-color: lightcyan;
+}
+
+
+.notifications:hover {
+	background-color: #f79e9e;
+}
+
+.Login:hover {
+	background-color: #ccf5b8;
+}
+
+.container {
+	width: 100%;
+}
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+	margin-top: 40px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+		/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.GitContainer {
+	background: linear-gradient(to right, #5ae8e4, #03a9f4);
+	height: 50px;
+	width: 150px;
+	margin-left: 100px;
+	transition: 0.2s;
+	box-shadow: 2px 2px 3px #ade7f7;
+	display: inline-block;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+
+.GitContainer:hover {
+	cursor: pointer;
+	box-shadow: 12px 12px 8px #ade7f7;
+}
+
+.ProjectHead{
+	margin-left: 20px;
+	font-size: 16px;
+	font-family: 'monospace',Courier New,monospace;
+}
+.ProjectTitle{
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 24px;
+}
+.ProjectStatus{
+    display: inline-block;
+    margin-left: 10px;
+}
+.ProjectDesc{
+    margin: 20px;
+    font-size: 18px;
+    line-height: 25px;
+}
+.ProjectMembers{
+	display: inline-block;
+	margin: 20px;
+}

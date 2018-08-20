@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	background-color: #f4f7f9;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+.navlist li {
+    display: inline-block;
+    margin: 10px;
+    margin-left: 15px;
+}
+.navlist {
+	width: 100%;
+}
+
+.Home {
+    border-bottom: 3px solid cyan;
+}
+
+.Catalog:hover {
+	background-color: lightcyan;
+}
+
+
+
+.container {
+	width: 100%;
+}
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+	margin-top: 40px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+		/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+#scroolToTop{
+    display: none;
+    position: fixed;
+    bottom: 120px;
+    right: 3px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: rgb(171, 52, 207);
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+}
+.Recommended {
+    margin-top: 50px;
+}
+.RecommendedCard {
+    background: linear-gradient(to right, #5ae8e4, #03a9f4);
+    height: 170px;
+    width: 300px;
+    margin-left: 35px;
+    margin-bottom: 40px;
+    transition: 0.2s;
+    box-shadow: 2px 2px 3px #ade7f7;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+
+.proposedprojectCard {
+    background: linear-gradient(to right, #f59292, #eb5454);
+    height: 170px;
+    width: 300px;
+    margin-left: 35px;
+    margin-bottom: 40px;
+    transition: 0.2s;
+    box-shadow: 2px 2px 3px #f37f7f;
+    display: inline-block;
+    border-radius: 15px;
+}
+.ProjectId {
+    margin-left: 13px;
+    margin-top: 15px;
+    background: linear-gradient(to right, #d58bfe, #7d4eff);
+    border-radius: 5px;
+    text-align: center;
+    width: 60px;
+    color: #ffffff;
+}
+
+.ProjectStatus {
+    margin-left: 220px;
+    margin-top: -17px;
+    background: linear-gradient(to right, #f6d365, #fda085);
+    border-radius: 5px;
+    text-align: center;
+    width: 60px;
+    color: white;
+}
+
+.ProjectTitle {
+    font-size: 25px;
+    color: #f4f7f9;
+    text-align: center;
+    padding: 15px;
+}
+
+.ProjectHead {
+    color: #f4f7f9;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px;
+}
+.Bookprice {
+    margin-left: 30px;
+    margin-top: -15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 60px;
+    background: linear-gradient(to right, #fa6ff3, #fa46eb);
+    color: white;
+}
+
+.AddToCart {
+    width: 30px;
+    margin-left: 250px;
+}
+.smallDescCards{
+    font-size: 12px;
+    margin-left: 15px
+}
+
+.bigDescCards{
+    margin-top: -8px;
+    margin-left: 15px
+}

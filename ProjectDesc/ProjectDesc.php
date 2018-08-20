@@ -33,6 +33,36 @@
     </script>
 </head>
 <body>
+	<?php
+		$projectID = $_GET['projectid'];
+		$servername = "localhost:3309";
+		$username = "root";
+		$password = "root";
+		$dbname = "abcprojects";
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+
+		// Check connection
+		if ($conn->connect_error) {
+		    die("Connection failed: " . $conn->connect_error);
+		}
+		$sql = "SELECT ProjectHead,ProjectTitle,ProjectDescription,projectStatus,ProjectGitRepo FROM projects WHERE ID=$projectID";
+		$result = $conn->query($sql);
+		if ($result->num_rows > 0) {
+			// output data of each row
+			while($row = $result->fetch_assoc()) {
+				$ProjectHead = $row["ProjectHead"];
+				$ProjectTitle = $row["ProjectTitle"];
+				$ProjectDescription = $row["ProjectDescription"];
+				$projectStatus = $row["projectStatus"];
+				$ProjectGitRepo = $row["ProjectGitRepo"];
+			}
+		} else {
+			echo "0 results";
+		}
+		$conn->close();
+	?>
     <div class="container">
 	<button id="scroolToTop1" onclick="topFunction()"  title="Go to top">Top</button>
 		<script>
@@ -71,22 +101,17 @@
 				</li>
 			</ul>
         </nav>
-        <div class="ProjectHead">ProjectHead</div>
-        <div class="ProjectTitle">ProjectTitle</div>
-        <div class="ProjectStatus">ProjectStatus</div>	
-        <div class="ProjectDesc">The first "working draft" of HTML5 came out in January of 2008 and it already has surprisingly broad browser support. However HTML5 is not yet fully implemented and won't be for some years yet. There are any number of planning committees that have plans to make it a "Recommendation", but such plans are still in the planning phase – and don't plan on that changing anytime soon. **
-Two groups, the W3C and the WHATWG, are in charge of developing HTML5. Why two groups? "The WHATWG was formed in response to the slow development of web standards monitored by the W3C." wikipedia – In other words they got in a fight and parted ways.
-They say they have since kissed and made up.<p> Both groups agree that it's going to take years to fully implement HTML5, though it will be in wide use long before then – assuming that, like eColi, they don't divide and multiply again.
-Many on the boards of W3C and WHATWG work for</p> competing browser companies. Inevitably conflicts of interest (for example MS's brutal attempt in the late 1990s to control it all - wikipedia), have provoked problems, but I will admit – albeit begrudgingly, that on the whole they have done a reasonably good job.</div>	
+        <div class="ProjectHead"><?php echo $ProjectHead ?></div>
+        <div class="ProjectTitle"><?php echo $ProjectTitle ?></div>
+        <div class="ProjectStatus"><?php echo $projectStatus ?></div>	
+        <div class="ProjectDesc"><?php echo $ProjectDescription ?></div>
         <div class="ProjectMembers">M.Sree Teja<br/>S.Sai Krishna<br/>Nivedh Vishnu</div>
-        <div class="GitContainer">
+        <a href=<?php echo $ProjectGitRepo ?>><div class="GitContainer">
         	<div style="text-align: center;color: white;font-size: 20px;margin-top: 5px;">Git Repo</div>
         	<div align="center"><img src="../imgs/git.png" height="20px" width="20px"></div>
-        </div>
+        </div></a>
     </div>
 	<footer style="text-align: center; font-style: italic">&copy; ABC Club</footer>
-    <?php
-    echo $_GET['projectid'];
-    ?>
+	
 </body>
 </html>
